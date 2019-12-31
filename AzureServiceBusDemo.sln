@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureServiceBusDemo.Shared"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureServiceBusDemo.Consumer", "src\AzureServiceBusDemo.Consumer\AzureServiceBusDemo.Consumer.csproj", "{76EFA07E-F712-4713-82C8-A79A2F5F5605}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzPop.Domain", "src\FizzBuzzPop.Domain\FizzBuzzPop.Domain.csproj", "{761FB1BE-6311-4A27-AB7B-18405252856F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzPop.Domain.Tests", "src\FizzBuzzPop.Domain.Tests\FizzBuzzPop.Domain.Tests.csproj", "{6E2B7BA1-5D4F-4A9C-8FD9-131204D28BB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{76EFA07E-F712-4713-82C8-A79A2F5F5605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76EFA07E-F712-4713-82C8-A79A2F5F5605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76EFA07E-F712-4713-82C8-A79A2F5F5605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761FB1BE-6311-4A27-AB7B-18405252856F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761FB1BE-6311-4A27-AB7B-18405252856F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761FB1BE-6311-4A27-AB7B-18405252856F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761FB1BE-6311-4A27-AB7B-18405252856F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2B7BA1-5D4F-4A9C-8FD9-131204D28BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2B7BA1-5D4F-4A9C-8FD9-131204D28BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2B7BA1-5D4F-4A9C-8FD9-131204D28BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2B7BA1-5D4F-4A9C-8FD9-131204D28BB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

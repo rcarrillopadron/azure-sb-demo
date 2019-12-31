@@ -36,7 +36,7 @@ namespace AzureServiceBusDemo.Consumer
                 config.StorageContainerName);
 
             // Registers the Event Processor Host and starts receiving messages
-            _eventProcessorHost.RegisterEventProcessorAsync<SimpleEventProcessor>();
+            _eventProcessorHost.RegisterEventProcessorAsync<FizzBuzzPopEventProcessor>();
             return base.StartAsync(cancellationToken);
         }
 

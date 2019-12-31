@@ -16,5 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AzureServiceBusDemo.Shared\AzureServiceBusDemo.Shared.csproj" />
+    <ProjectReference Include="..\FizzBuzzPop.Domain\FizzBuzzPop.Domain.csproj" />
   </ItemGroup>
 </Project>

@@ -4,10 +4,11 @@ using System.Text;
 using Microsoft.Azure.EventHubs;
 using Microsoft.Azure.EventHubs.Processor;
 using System.Threading.Tasks;
+using FizzBuzzPop.Domain;
 
 namespace AzureServiceBusDemo.Consumer
 {
-    public class SimpleEventProcessor : IEventProcessor
+    public class FizzBuzzPopEventProcessor : IEventProcessor
     {
         public Task CloseAsync(PartitionContext context, CloseReason reason)
         {
@@ -32,7 +33,10 @@ namespace AzureServiceBusDemo.Consumer
             foreach (var eventData in messages)
             {
                 var data = Encoding.UTF8.GetString(eventData.Body.Array, eventData.Body.Offset, eventData.Body.Count);
-                Console.WriteLine($"Message received. Partition: '{context.PartitionId}', Data: '{data}'");
+
+                int value = int.Parse(data);
+                string message = FizzBuzzPopCalculator.GetMessage(value);
+                Console.WriteLine($"Message received. Partition: '{context.PartitionId}', Data: '{data}' - FizzBuzzPop output: '{message}'");
             }
 
             return context.CheckpointAsync();
