@@ -30,8 +30,8 @@ namespace AzureServiceBusDemo.Producer
             {
                 try
                 {
-                    var message = $"Message {i}";
-                    Console.WriteLine($"Sending message: {message}");
+                    var message = i.ToString();
+                    Console.WriteLine($"Sending number: {message}");
                     await eventHubClient.SendAsync(new EventData(Encoding.UTF8.GetBytes(message)));
                 }
                 catch (Exception exception)
