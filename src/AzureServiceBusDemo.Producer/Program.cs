@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
+using AzureServiceBusDemo.Shared;
 using Microsoft.Azure.EventHubs;
 using Microsoft.Extensions.Configuration;
 
@@ -16,11 +17,10 @@ namespace AzureServiceBusDemo.Producer
         private static async Task MainAsync(string[] args)
         {
             var configurationRoot = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
-            string EventHubConnectionString = configurationRoot["EventHubConnectionString"];
-            string EventHubName = configurationRoot["EventHubName"];
-            var connectionStringBuilder = new EventHubsConnectionStringBuilder(EventHubConnectionString)
+            var config = new TheConfig(configurationRoot);
+            var connectionStringBuilder = new EventHubsConnectionStringBuilder(config.EventHubConnectionString)
             {
-                EntityPath = EventHubName
+                EntityPath = config.EventHubName
             };
 
             EventHubClient eventHubClient = EventHubClient.CreateFromConnectionString(connectionStringBuilder.ToString());
